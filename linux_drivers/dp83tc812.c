@@ -488,7 +488,7 @@ static int DP83TC812_config_init(struct phy_device *phydev)
 			rgmii_delay |= DP83TC812_TX_CLK_SHIFT;
 
 		if (rgmii_delay) {
-			ret = phy_set_bits_mmd(phydev, MMD1,
+			ret = phy_set_bits_mmd(phydev, MMD1F,
 					       DP83TC812_RGMII_ID_CTRL,
 					       rgmii_delay);
 			if (ret)
